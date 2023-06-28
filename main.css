@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    /* viewport units: vh (viewport height), vw (v width), vmin (smallest between vh & vw) */
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    font-size: 4vmin;
+    color: darkmagenta;
+    letter-spacing: 1vmin;
+}
+
+h1 {
+    color: green;
+    font-size: 3vmin;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, 10vmin);
+    grid-template-rows: repeat(3, 10vmin);
+}
+
+#board > div {
+    border: .1vmin solid grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5vmin;
+}
+
+#board > div:hover{
+    background-color: cadetblue;
+    cursor: pointer;
+}
+
+button {
+    margin-top: 4vmin;
+    padding: 2vmin;
+    font-size: 2vmin;
+    border-radius: 4vmin;
+    border: 0.1vmin solid grey;
+    color: grey;
+}
+
+button:hover {
+    color: white;
+    background-color: darkgrey;
+}
