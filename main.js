@@ -18,7 +18,7 @@
 
 	/*----- event listeners -----*/
     boardBody.addEventListener('click', playerClicked);
-    playAgainBtn.addEventListener('click', playAgain);
+    playAgainBtn.addEventListener('click', init);
 
 	/*----- functions -----*/
     init();
@@ -68,7 +68,7 @@
 
     function renderMessage() {
         if (winner === 'T') {
-            messageEl.innerText = "It's a Tie!!!";
+            messageEl.innerText = "Cat's Game! Rats! It's a TIE!";
         } else if (winner) {
             messageEl.innerHTML = `<span style="color: ${BOARDCOLORS[winner]}">${BOARDCOLORS[winner].toUpperCase()}</span> Wins!`;
         } else {
@@ -83,11 +83,6 @@
             playAgainBtn.style.visibility = 'visible';
         else
             playAgainBtn.style.visibility = winner ? 'visible' : 'hidden';
-    }
-
-    function playAgain(evt) {
-        evt.target.style.visibility = 'hidden';
-        init();
     }
 
     function playerClicked(evt) {
